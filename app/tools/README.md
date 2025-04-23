@@ -15,7 +15,8 @@
     - [**Rubric Generator**](#rubric-generator)
     - [**Lesson Plan Generator**](#lesson-plan-generator)
     - [**Writing Feedback Generator**](#writing-feedback-generator)
-    - [****Educational Image Generator**] (#educational-image-generator)
+    - [**Educational Image Generator**](#educational-image-generator)
+
 
 ## AVAILABLE DOCUMENT LOADERS FOR DIFFERENT FILE TYPES:
 
