@@ -15,6 +15,7 @@
     - [**Rubric Generator**](#rubric-generator)
     - [**Lesson Plan Generator**](#lesson-plan-generator)
     - [**Writing Feedback Generator**](#writing-feedback-generator)
+    - [****Educational Image Generator**] (#educational-image-generator)
 
 ## AVAILABLE DOCUMENT LOADERS FOR DIFFERENT FILE TYPES:
 
@@ -2957,3 +2958,220 @@ class WritingFeedback(BaseModel):
 	}
 }
 ```
+## Educational Image Generator
+Input Schema:
+class EduImageArgs(BaseModel):
+    topic: str
+    file_url: str
+    file_type: str
+    lang: str = "en"
+    grade_level: str
+    image_description: str
+    
+Output Schema:
+{
+  "image_prompt": "A description of the educational image generated",
+  "image_url": "https://link.to.generated.image"
+}
+
+PDF
+
+{
+  "user": {
+    "id": "string",
+    "fullName": "string",
+    "email": "string"
+  },
+  "type": "tool",
+  "tool_data": {
+    "tool_id": "educational-image-generator",
+    "inputs": [
+      {
+        "name": "topic",
+        "value": "Photosynthesis"
+      },
+      {
+        "name": "file_url",
+        "value": "https://firebasestorage.googleapis.com/v0/b/kai-ai-f63c8.appspot.com/o/uploads%2Fexample_photosynthesis.pdf?alt=media"
+      },
+      {
+        "name": "file_type",
+        "value": "pdf"
+      },
+      {
+        "name": "lang",
+        "value": "en"
+      },
+      {
+        "name": "grade_level",
+        "value": "middle school"
+      },
+      {
+        "name": "image_description",
+        "value": "An educational diagram that illustrates the process of photosynthesis, showing sunlight, water, carbon dioxide, glucose, and oxygen."
+      }
+    ]
+  }
+}
+
+Excel
+{
+  "user": {
+    "id": "string",
+    "fullName": "string",
+    "email": "string"
+  },
+  "type": "tool",
+  "tool_data": {
+    "tool_id": "educational-image-generator",
+    "inputs": [
+      {
+        "name": "topic",
+        "value": "Population Growth"
+      },
+      {
+        "name": "file_url",
+        "value": "https://example.com/sample_population_data.xlsx"
+      },
+      {
+        "name": "file_type",
+        "value": "xlsx"
+      },
+      {
+        "name": "lang",
+        "value": "en"
+      },
+      {
+        "name": "grade_level",
+        "value": "high school"
+      },
+      {
+        "name": "image_description",
+        "value": "A bar graph or line chart showing global population growth over time."
+      }
+    ]
+  }
+}
+
+
+Youtube
+{
+  "user": {
+    "id": "string",
+    "fullName": "string",
+    "email": "string"
+  },
+  "type": "tool",
+  "tool_data": {
+    "tool_id": "educational-image-generator",
+    "inputs": [
+      {
+        "name": "topic",
+        "value": "Machine Learning"
+      },
+      {
+        "name": "file_url",
+        "value": "https://www.youtube.com/watch?v=HgBpFaATdoA"
+      },
+      {
+        "name": "file_type",
+        "value": "youtube_url"
+      },
+      {
+        "name": "lang",
+        "value": "en"
+      },
+      {
+        "name": "grade_level",
+        "value": "college"
+      },
+      {
+        "name": "image_description",
+        "value": "A simplified flowchart of how machine learning works, including training data, model, prediction, and feedback loop."
+      }
+    ]
+  }
+}
+
+Google Drive
+
+{
+  "user": {
+    "id": "string",
+    "fullName": "string",
+    "email": "string"
+  },
+  "type": "tool",
+  "tool_data": {
+    "tool_id": "educational-image-generator",
+    "inputs": [
+      {
+        "name": "topic",
+        "value": "OpenAI Tools"
+      },
+      {
+        "name": "file_url",
+        "value": "https://docs.google.com/document/d/1abcExampleDocID"
+      },
+      {
+        "name": "file_type",
+        "value": "gdoc"
+      },
+      {
+        "name": "lang",
+        "value": "en"
+      },
+      {
+        "name": "grade_level",
+        "value": "college"
+      },
+      {
+        "name": "image_description",
+        "value": "A diagram showing the architecture of AI tools created by OpenAI, including models, APIs, and user interfaces."
+      }
+    ]
+  }
+}
+
+Image
+
+{
+  "user": {
+    "id": "string",
+    "fullName": "string",
+    "email": "string"
+  },
+  "type": "tool",
+  "tool_data": {
+    "tool_id": "educational-image-generator",
+    "inputs": [
+      {
+        "name": "topic",
+        "value": "Climate Change"
+      },
+      {
+        "name": "file_url",
+        "value": "https://drive.google.com/file/d/1exampleID/view?usp=sharing"
+      },
+      {
+        "name": "file_type",
+        "value": "gpdf"
+      },
+      {
+        "name": "lang",
+        "value": "en"
+      },
+      {
+        "name": "grade_level",
+        "value": "college"
+      },
+      {
+        "name": "image_description",
+        "value": "An infographic depicting the causes and effects of climate change, including carbon emissions, global warming, and sea-level rise."
+      }
+    ]
+  }
+}
+
+
+
